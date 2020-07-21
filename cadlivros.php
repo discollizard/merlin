@@ -4,8 +4,9 @@
 
 <main>
   <h1>Cadastro de Livros</h1>
-  <form action="cadlivros.inc.php" method="post">
-    <input type="text" name="nomelivro" placeholder="Nome do livro" maxlength="100"><br>
+  <form name="cadastrarlivro" action="includes/cadlivros.inc.php" method="get">
+    <input type="text" name="nomeLivro" placeholder="Nome do livro" maxlength="100"><br>
+    <input type="text" name="autor" placeholder="Autor" maxlength="50"><br>
     <select name="genero">
       <option value="romance">Romance</option>
       <option value="biografia">Biografia</option>
