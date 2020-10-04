@@ -4,8 +4,8 @@
     <meta charset="iso-8859-1">
     <meta name="viewport" content="width = device-width, initial-scale=1">
     <title> Merlin </title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.js"></script>
     <script src="js/jquery.js"></script>
   </head>
 
@@ -50,9 +50,9 @@
               <a class="nav-link" href="#" tabindex="-1">Ficção Científica</a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar Livro" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+          <form class="form-inline my-2 my-lg-0" action="buscalivros.php" method="get" name="frmPesquisar">
+            <input class="form-control mr-sm-2" name="frmPesquisar" type="search" placeholder="Pesquisar Livro" aria-label="Search">
+            <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Pesquisar</button>
           </form>
         </div>
 </nav>
