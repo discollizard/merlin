@@ -57,7 +57,7 @@
 
 
                     echo "</table>";
-                echo "<input type='submit' value='Excluir'>
+                echo "<input type='submit' class='btn btn-outline-warning my-2 my-sm-0 center-block' value='Excluir'>
                   </form>";
               echo "</div>";
 

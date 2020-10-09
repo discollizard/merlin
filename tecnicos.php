@@ -1,18 +1,21 @@
 <?php
-  require "header.php";
+  require "header.php"
  ?>
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+ <link rel="stylesheet" href="css/helper.css">
 <body>
   <div class="container-fluid">
     <?php
-      require "includes/dbh.inc.php";
-      $sql = "SELECT * FROM livros";
-      $result = mysqli_query($conn, $sql);
-      $queryResults = mysqli_num_rows($result);
 
-      if($queryResults > 0) {
+      error_reporting(0);
+      require "includes/dbh.inc.php";
+
+      $query = "SELECT * FROM livros WHERE liv_genero = 'tecnico'";
+      $result = mysqli_query($conn, $query);
+
+
+      if($result > 0) {
 
           echo "<div class='container-fluid' style='overflow-x: auto;'>
                   <table class='table'>
@@ -26,7 +29,7 @@
                         <th scope='col'>Nº Páginas</th>
                         <th scope='col'>Autor</th>
                         <th scope='col'>Sinopse</th>
-                        <th scope='col'>Excluir
+                        <th scope='col'>Excluir</th>
                       </tr>
                     </thead>
                     <tbody>";
@@ -42,24 +45,33 @@
                         <td>".$row['liv_autor']."</td>
                         <td>".$row['liv_sinopse']."</td>
                         <td>
-                        <form name='deletebtn' method='get' action='includes/buscalivros.inc.php'>
-                          <input type='checkbox' name='delete' value='".$row['liv_cod']."'>
+                          <form name='deletebtn' method='get' action='includes/buscalivros.inc.php'>
+                            <input type='checkbox' name='delete' value='".$row['liv_cod']."'>
 
-                      </td>
-                    </tr>
-                    ";
-                  }
+                        </td>
+                      </tr>
+                      ";
+                    }
 
 
-                  echo "</table>";
-              echo "<input type='submit' class='btn btn-outline-warning my-2 my-sm-0 center-block' value='Excluir'>
-                </form>";
-            echo "</div>";
+                    echo "</table>";
+                echo "<input type='submit' class='btn btn-outline-warning my-2 my-sm-0 center-block' value='Excluir'>
+                  </form>";
+              echo "</div>";
 
+
+        }
+        else {
+          echo "<div class='col-centered'>
+                  <div class='col-xs-4' style='margin: 25%;'>
+                    <h2> Desculpe, não foi possível encontrar um resultado </h2>
+                  </div>
+                </div>";
         }
     ?>
   </div>
+
 </body>
 <?php
-  require "footer.php";
- ?>
+  require "footer.php"
+?>

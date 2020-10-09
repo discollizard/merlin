@@ -29,25 +29,25 @@
               <a class="nav-link" href="cadlivros.php">Cadastrar Livro</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" tabindex="-1">Romances</a>
+              <a class="nav-link" href="romances.php" tabindex="-1">Romances</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" tabindex="-1">Biografias</a>
+              <a class="nav-link" href="biografias.php" tabindex="-1">Biografias</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" tabindex="-1">Terror</a>
+              <a class="nav-link" href="terror.php" tabindex="-1">Terror</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" tabindex="-1">Fantasia</a>
+              <a class="nav-link" href="fantasia.php" tabindex="-1">Fantasia</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" tabindex="-1">Livros Técnicos</a>
+              <a class="nav-link" href="tecnicos.php" tabindex="-1">Livros Técnicos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" tabindex="-1">Livros de Poesia</a>
+              <a class="nav-link" href="poesias.php" tabindex="-1">Livros de Poesia</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" tabindex="-1">Ficção Científica</a>
+              <a class="nav-link" href="ficcaocientifica.php" tabindex="-1">Ficção Científica</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0" action="buscalivros.php" method="get" name="frmPesquisar">
